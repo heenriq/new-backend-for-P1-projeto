@@ -1,0 +1,16 @@
+{
+  "name": "14-09-aula",
+  "version": "1.0.0",
+  "description": "Backend para calculos de frete.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Pedro H. Santos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
