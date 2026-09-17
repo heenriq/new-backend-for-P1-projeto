@@ -13,8 +13,17 @@ app.get("/", (req, res) => {
 app.post("/frete", (req, res) => {
   const valorPedido = req.body.valor;
   const resultado = calcularFrete(valorPedido);
+  let Frete;
 
-  res.json({ tipo: `${resultado.tipo}`, result: resultado.valorFinal });
+  if (resultado.tipo === "frete") {
+    Frete = 5;
+  } else if (resultado.tipo === "descontado") {
+    Frete = 2.5;
+  } else {
+    Frete = 0;
+  }
+
+  res.json({ valorFrete: `${Frete}`, result: resultado.valorFinal });
 });
 
 const PORT = process.env.PORT || 4000;
